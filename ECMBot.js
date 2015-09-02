@@ -237,7 +237,7 @@
 
     var basicBot = {
         version: "9.2.56",
-        status: true,
+        status: false,
         name: "ECMusic Bot",
         loggedInID: null,
         scriptLink: "https://raw.githubusercontent.com/Lacquan/ECM/master/ECMBot.js",
