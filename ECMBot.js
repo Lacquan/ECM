@@ -240,7 +240,7 @@
         status: false,
         name: "basicBot",
         loggedInID: null,
-        scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
+        scriptLink: "https://raw.githubusercontent.com/Lacquan/ECM/master/ECMBot.js",
         cmdLink: "http://ecmusic.elementfx.com/index.php/board,5.0.html",
         chatLink: "https://raw.githubusercontent.com/Lacquan/ECM/master/lang/en.json",
         chat: null,
@@ -251,7 +251,7 @@
             botName: "ECMusic Bot",
             language: "english",
             chatLink: "https://raw.githubusercontent.com/Lacquan/ECM/master/lang/en.json",
-            scriptLink: "https://rawgit.com/Yemasthui/basicBot/master/basicBot.js",
+            scriptLink: "https://raw.githubusercontent.com/Lacquan/ECM/master/ECMBot.js",
             roomLock: false, // Requires an extension to re-load the script
             startupCap: 200, // 1-200
             startupVolume: 0, // 0-100
