@@ -301,6 +301,7 @@
             themeLink: null,
             fbLink: "https://www.facebook.com/pages/Explosives-Camp-Of-Music/162362167434651",
             youtubeLink: "https://www.youtube.com/channel/UCyl3z1tNheZCo9cvGwxmKHA",
+            forum: "http://ecmusic.elementfx.com",
             website: "http://plugdjecm.elementfx.com/",
             intervalMessages: [],
             messageInterval: 5,
@@ -2230,6 +2231,20 @@
                             basicBot.room.skippable = true
                         }, 5 * 1000);
 
+                    }
+                }
+            },
+
+            forumCommand: {
+                command: 'forum',
+                rank: 'user',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (typeof basicBot.settings.forum === "string")
+                            API.sendChat(subChat(basicBot.chat.forum, {link: basicBot.settings.forum}));
                     }
                 }
             },
