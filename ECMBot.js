@@ -2234,6 +2234,20 @@
                 }
             },
 
+            forumCommand: {
+                command:'forum',
+                rank: 'user',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (typeof basicBot.settings.forum === "string")
+                            API.sendChat(subChat(basicBot.chat.forum, {link: basicBot.settings.forum}));
+                    }
+                }
+            },
+
             ghostbusterCommand: {
                 command: 'ghostbuster',
                 rank: 'user',
@@ -3573,6 +3587,20 @@
                 }
             },
 
+            websiteCommand: {
+                command: 'website',
+                rank: 'user',
+                type: 'exact',
+                functionality: function (chat, cmd) {
+                    if (this.type === 'exact' && chat.message.length !== cmd.length) return void (0);
+                    if (!basicBot.commands.executable(this.rank, chat)) return void (0);
+                    else {
+                        if (typeof basicBot.settings.website === "string")
+                            API.sendChat(subChat(basicBot.chat.website, {link: basicBot.settings.website}));
+                    }
+                }
+            },
+            
             websiteCommand: {
                 command: 'website',
                 rank: 'user',
